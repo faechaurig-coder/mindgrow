@@ -69,6 +69,7 @@ export function SemaforoMagico({ ageYears, rounds, sessionId, context, onRound, 
 
   return (
     <GameHost
+      gameId="semaforo"
       title="Semáforo Mágico"
       message={feedback || (crystal === "green" ? "Verde: toca la estrella" : "Rojo: no toques")}
       total={rounds}
@@ -128,7 +129,7 @@ export function SemaforoMagico({ ageYears, rounds, sessionId, context, onRound, 
             </button>
           ) : null}
         </div>
-        <GameFeedback kind={feedback.includes("otra") ? "retry" : feedback ? "correct" : null} />
+        <GameFeedback companion="nilo" kind={feedback.includes("otra") ? "retry" : feedback ? "correct" : null} />
       </div>
     </GameHost>
   );

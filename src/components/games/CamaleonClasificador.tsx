@@ -81,6 +81,7 @@ export function CamaleonClasificador({ ageYears, rounds, sessionId, context, onR
 
   return (
     <GameHost
+      gameId="camaleon"
       title="Camaleón Clasificador"
       message={rule === "color" ? "Cami quiere colores juntos" : "Ahora Cami quiere formas"}
       total={Math.min(rounds, 4)}

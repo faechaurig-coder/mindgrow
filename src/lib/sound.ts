@@ -77,3 +77,31 @@ export function playNiloHello() {
 export function playNiloOops() {
   tone(280, now(), 0.09, 0.025, "sine");
 }
+
+export function playLumiGlow() {
+  const t = now();
+  tone(740, t, 0.08, 0.02, "sine");
+  tone(990, t + 0.07, 0.12, 0.018, "sine");
+}
+
+export function playCamiShift() {
+  const t = now();
+  tone(349, t, 0.07, 0.03, "triangle");
+  tone(415, t + 0.08, 0.09, 0.028, "triangle");
+}
+
+export function playTikoKnock() {
+  const t = now();
+  tone(196, t, 0.05, 0.04, "square");
+  tone(246, t + 0.06, 0.06, 0.03, "square");
+}
+
+export function playCritter(name: string) {
+  if (name === "lumi" || name === "lumen") return playLumiGlow();
+  if (name === "cami") return playCamiShift();
+  if (name === "tiko") return playTikoKnock();
+  if (name === "nilo") return playNiloHello();
+  if (name === "rana") return playTap();
+  if (name === "cometa" || name === "lucero") return playSparkle();
+  playMicro();
+}

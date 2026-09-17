@@ -69,6 +69,7 @@ export function CaminoLuciernagas({ ageYears, rounds, sessionId, context, onRoun
 
   return (
     <GameHost
+      gameId="luciernagas"
       title="Camino de Luciérnagas"
       message={phase === "show" ? "Lumi perdió el camino. Mira." : "Ayuda a Lumi"}
       total={rounds}

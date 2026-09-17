@@ -236,7 +236,7 @@ export function Splash() {
         <div className="mt-10">
           <p className="text-xs uppercase tracking-[0.28em] text-[#4f7a62]">MindGrow</p>
           <div className="mt-8 flex justify-center">
-            <Nilo size={168} mood="wave" />
+            <Nilo size={168} mood="wave" interactive />
           </div>
           <h1 className="h-display mt-6 text-[42px] leading-none text-[#16233d]">Haz crecer tu mundo.</h1>
           <p className="mx-auto mt-4 max-w-[300px] text-[16px] leading-7 text-[#243044]/80">
@@ -264,7 +264,7 @@ export function Handoff() {
       <div className="rays" />
       <div className="safe-pad relative flex h-full flex-col items-center justify-between text-center text-white">
       <div className="mt-8">
-        <Nilo size={156} mood="wave" />
+        <Nilo size={156} mood="wave" interactive />
         <h2 className="h-child mt-4 text-[34px] font-extrabold">Entrégale el aparato</h2>
         <p className="mt-3 text-[16px] leading-7 text-white/85">
           El valle está quieto. Juntos despertarán el primer pedacito. No es un examen.

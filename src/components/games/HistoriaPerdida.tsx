@@ -65,6 +65,7 @@ export function HistoriaPerdida({ ageYears, rounds, sessionId, context, onRound,
 
   return (
     <GameHost
+      gameId="historia"
       title="La Historia Perdida"
       message={phase === "show" ? "Mira qué pasa" : "¿Qué pasó primero?"}
       total={Math.min(rounds, 3)}

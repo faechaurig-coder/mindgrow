@@ -1,6 +1,6 @@
 import type { SkillId, WorldProgress } from "./types";
 
-const CREATURES = ["lumen", "hoja", "búho", "rana", "cometa", "caracol", "lucero"];
+const CREATURES = ["lumen", "cami", "tiko", "búho", "rana", "caracol", "lucero"];
 
 const EVENTS = [
   "Una flor nueva se asoma.",

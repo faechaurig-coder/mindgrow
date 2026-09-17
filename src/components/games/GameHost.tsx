@@ -2,9 +2,11 @@
 
 import type { ReactNode } from "react";
 import { ChildStage } from "@/components/child/WorldScene";
-import { Nilo, SpeechBubble } from "@/components/mascot/Nilo";
-import { emotionForHost, type CharacterEmotion } from "@/lib/character";
+import { Companion } from "@/components/mascot/Cast";
+import { SpeechBubble } from "@/components/mascot/Nilo";
+import { companionForGame, emotionForHost, type CharacterEmotion } from "@/lib/character";
 import { speak } from "@/lib/speech";
+import type { GameId } from "@/lib/types";
 import { ProgressPips } from "@/components/ui/primitives";
 
 export function GameHost({
@@ -15,6 +17,7 @@ export function GameHost({
   children,
   footer,
   emotion,
+  gameId,
 }: {
   title: string;
   message: string;
@@ -23,13 +26,15 @@ export function GameHost({
   children: ReactNode;
   footer?: ReactNode;
   emotion?: CharacterEmotion;
+  gameId?: GameId;
 }) {
+  const companion = companionForGame(gameId);
   return (
     <ChildStage mode="focused">
       <div className="safe-pad pb-2">
         {total && current !== undefined ? <ProgressPips total={total} current={current} /> : null}
         <div className="mt-4 flex items-center gap-3">
-          <Nilo size={80} mood={emotion ?? emotionForHost(message)} />
+          <Companion id={companion} size={80} mood={emotion ?? emotionForHost(message)} interactive />
           <div>
             <SpeechBubble child text={message} />
             <button

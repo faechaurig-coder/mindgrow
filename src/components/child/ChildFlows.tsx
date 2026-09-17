@@ -21,7 +21,7 @@ export function DiscoveryAdventure() {
       <ChildStage>
         <div className="safe-pad flex h-full flex-col items-center justify-between text-center text-white">
           <div className="mt-8">
-            <Nilo size={148} mood="curious" />
+            <Nilo size={148} mood="curious" interactive />
             <h1 className="h-child mt-4 text-[34px] font-extrabold">El valle se quedó callado</h1>
             <p className="mt-3 text-[16px] leading-7 text-white/85">
               Nilo no sabe por dónde empezar. ¿Lo ayudamos a despertar un pedacito?
@@ -72,7 +72,7 @@ export function DailyAdventure() {
           <WorldScene world={state.world} interests={child.interests} immersive highlightLatest />
         </div>
         <div className="relative z-10 mt-auto safe-pad pb-8 text-center">
-          <Nilo size={108} mood="cheer" />
+          <Nilo size={108} mood="cheer" interactive />
           <p className="h-child mt-2 text-3xl font-extrabold">{reaction}</p>
           <p className="mt-2 text-white/85">{state.world.lastEvent}</p>
         </div>
@@ -108,7 +108,7 @@ export function SeedMoment() {
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-between gap-6 overflow-y-auto safe-pad text-center">
         <div className="mt-2">
-          <Nilo size={120} mood="cheer" />
+          <Nilo size={120} mood="cheer" interactive />
           <SpeechBubble child text="¡Ya empezamos a construir tu mundo!" />
           <div className="mt-4 grow-up flex justify-center">
             <Picto id="semilla" size={80} />
@@ -136,10 +136,10 @@ export function ChildHome() {
       <div className="absolute inset-0">
         <WorldScene world={state.world} interests={state.child?.interests} immersive />
       </div>
-      <div className="relative z-10 flex h-full min-h-0 flex-col">
+      <div className="pointer-events-none relative z-10 flex h-full min-h-0 flex-col">
         <div className="min-h-0 flex-1" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#122018cc] via-[#1a274455] to-transparent" />
-        <div className="relative safe-pad flex flex-col gap-3 pt-0">
+        <div className="absolute inset-x-0 bottom-0 h-52 bg-gradient-to-t from-[#122018cc] via-[#1a274455] to-transparent" />
+        <div className="pointer-events-auto relative safe-pad flex flex-col gap-3 pt-0">
           <p className="text-sm font-medium text-white/90 drop-shadow">El mundo de {state.child?.nickname}</p>
           <h1 className="h-child text-[32px] font-extrabold leading-[0.95]">Nilo te espera</h1>
           <p className="text-sm text-white/85">{state.world.lastEvent || "El valle está quieto. Vamos a despertarlo."}</p>
@@ -169,7 +169,7 @@ export function RealWorldMission() {
     <ChildStage>
       <div className="safe-pad flex h-full flex-col items-center justify-between gap-6 overflow-y-auto text-center text-white">
         <div>
-          <Nilo size={132} mood="wave" />
+          <Nilo size={132} mood="wave" interactive />
           <p className="text-sm uppercase tracking-[0.18em] text-white/70">Misión en el mundo real</p>
           <h1 className="h-child mt-3 text-[32px] font-extrabold">{mission.title}</h1>
           <p className="glass-card mt-4 rounded-[28px] p-5 text-lg font-bold leading-7 text-[#1a2744]">
@@ -199,7 +199,7 @@ export function SessionComplete() {
       </div>
       <div className="relative z-10 flex h-full flex-col items-center justify-between gap-6 overflow-y-auto safe-pad text-center">
         <div className="mt-4">
-          <Nilo size={124} mood="celebrate" />
+          <Nilo size={124} mood="celebrate" interactive />
           <h1 className="h-child mt-3 text-[34px] font-extrabold">¡Ya hicimos mucho hoy!</h1>
           <p className="mt-3 text-white/85">{state.world.lastEvent || "Tu mundo creció un poquito más."}</p>
         </div>

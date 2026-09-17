@@ -42,7 +42,7 @@ export function QueSigue({ ageYears, rounds, sessionId, context, onRound, onComp
   }
 
   return (
-    <GameHost title="¿Qué sigue?" message="Mira el patrón y toca la pieza" total={Math.min(rounds, 5)} current={index}>
+    <GameHost gameId="quesigue" title="¿Qué sigue?" message="Mira el patrón y toca la pieza" total={Math.min(rounds, 5)} current={index}>
       {!ready ? (
         <AnimatedInstruction
           compact

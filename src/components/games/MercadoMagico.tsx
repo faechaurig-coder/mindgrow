@@ -61,6 +61,7 @@ export function MercadoMagico({ ageYears, rounds, sessionId, context, onRound, o
 
   return (
     <GameHost
+      gameId="mercado"
       title="Mercado Mágico"
       message={compare ? "¿Dónde hay más?" : `Toca ${target}`}
       total={Math.min(rounds, 5)}

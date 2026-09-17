@@ -49,6 +49,7 @@ export function GuardianesBosque({ ageYears, rounds, sessionId, context, onRound
 
   return (
     <GameHost
+      gameId="guardianes"
       title="Guardianes del Bosque"
       message="Toca al amigo con la hojita"
       total={Math.min(rounds, 6)}

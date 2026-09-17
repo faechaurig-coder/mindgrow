@@ -79,7 +79,7 @@ export function CasaPuzzle({ ageYears, rounds, sessionId, context, onRound, onCo
   const unused = pieces.map((p) => house[p]).filter((glyph) => !Object.values(placed).includes(glyph));
 
   return (
-    <GameHost title="Casa Puzzle" message="Ayuda a Tiko: toca una pieza y su lugar" total={Math.min(rounds, 3)} current={index}>
+    <GameHost gameId="casa" title="Casa Puzzle" message="Ayuda a Tiko: toca una pieza y su lugar" total={Math.min(rounds, 3)} current={index}>
       {!ready ? (
         <AnimatedInstruction
           compact
@@ -143,7 +143,7 @@ export function CasaPuzzle({ ageYears, rounds, sessionId, context, onRound, onCo
           </button>
         ))}
       </div>
-      <GameFeedback kind={note} />
+      <GameFeedback companion="tiko" kind={note} />
     </GameHost>
   );
 }

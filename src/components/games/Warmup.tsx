@@ -18,6 +18,7 @@ export function Warmup({ onComplete }: { onComplete: () => void }) {
 
   return (
     <GameHost
+      gameId="warmup"
       title="Primeros pasos"
       message={
         step === "tap" ? "Toca a Nilo" : step === "leaf" ? "Toca la hojita y luego a Nilo" : "¡Ya sabemos jugar!"

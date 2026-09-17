@@ -45,7 +45,7 @@ export function BosquePalabras({ ageYears, rounds, sessionId, context, onRound, 
   }
 
   return (
-    <GameHost title="Bosque de Palabras" message={`¿Dónde está ${item.word}?`} total={Math.min(rounds, 6)} current={index}>
+    <GameHost gameId="bosque" title="Bosque de Palabras" message={`¿Dónde está ${item.word}?`} total={Math.min(rounds, 6)} current={index}>
       {!ready ? (
         <AnimatedInstruction
           compact
